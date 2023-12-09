@@ -83,19 +83,7 @@ function Main({navigation}) {
         <Text style={{fontWeight: 'bold', alignSelf: 'center', fontSize: 20}}>
           Main Page{' '}
         </Text>
-        {/* <TouchableOpacity
-          style={{flex: 1, justifyContent: 'center'}}
-          onPress={() => navigation.navigate('ListView')}>
-          <Text
-            style={{
-              fontWeight: 'bold',
-              color: 'red',
-              fontSize: 20,
-              alignSelf: 'center',
-            }}>
-            Click here to Listview Page
-          </Text>
-        </TouchableOpacity> */}
+       
 
         <FlatList data={data} renderItem={renderItem} />
       </View>
