@@ -13,6 +13,7 @@ import ListView from './src/screens/ListView';
 import Main from './src/screens/Main';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import DetailCard from './src/screens/DetailCard';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +34,16 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <Main/>
+    <NavigationContainer>
+       <Stack.Navigator>
+         <Stack.Screen
+           name="Main"
+           component={Main}
+           options={{headerShown: false}}
+         />
+         <Stack.Screen name="DetailCard" component={DetailCard} />
+       </Stack.Navigator>
+     </NavigationContainer>
   );
 }
 const styles = StyleSheet.create({
