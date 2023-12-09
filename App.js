@@ -35,15 +35,15 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-       <Stack.Navigator>
-         <Stack.Screen
-           name="Main"
-           component={Main}
-           options={{headerShown: false}}
-         />
-         <Stack.Screen name="DetailCard" component={DetailCard} />
-       </Stack.Navigator>
-     </NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Main"
+          component={Main}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen name="DetailCard" component={DetailCard} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 const styles = StyleSheet.create({
@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: 16,
     paddingVertical: 16,
-    borderBottomWidth: 1,
     borderColor: '#ddd',
   },
   image: {
