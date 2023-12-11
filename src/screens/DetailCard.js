@@ -50,12 +50,14 @@ export default function DetailCard({route}) {
         </Text>
       </View>
       <View style={{marginBottom: -60, justifyContent: 'flex-end'}}>
+      
         <Image
           src={item?.image}
           style={{width: 150, height: 200}}
           resizeMode={'cover'}
         />
       </View>
+      
     </View>
     //   </SafeAreaView>
   );

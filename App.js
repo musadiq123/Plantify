@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   Button,
   SafeAreaView,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import ListView from './src/screens/ListView';
@@ -14,6 +15,7 @@ import Main from './src/screens/Main';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DetailCard from './src/screens/DetailCard';
+import Header from './src/components/header';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,7 +41,10 @@ export default function App() {
         <Stack.Screen
           name="Main"
           component={Main}
-          options={{headerShown: false}}
+          options={{
+            headerTransparent: true,
+            headerTitle: ()=> <Header name="Plantify" />,
+          }}
         />
         <Stack.Screen name="DetailCard" component={DetailCard} />
       </Stack.Navigator>
